@@ -1,8 +1,8 @@
 <template>
   <div
-    class="amk-input"
+    class="ne-input"
     :class="[
-      disabled && 'amk-input_disabled',
+      disabled && 'ne-input_disabled',
     ]"
   >
     <label>
@@ -84,18 +84,18 @@
 </script>
 
 <style lang="scss" scoped>
-  .amk-input {
+  .ne-input {
     display: block;
     width: 100%;
     background-color: $color-gray-01;
     border-radius: 5px;
     padding: 10px;
   }
-  .amk-input label {
+  .ne-input label {
     display: block;
     width: 100%;
   }
-  .amk-input label input {
+  .ne-input label input {
     display: block;
     width: 100%;
     font-size: 13px;
@@ -106,62 +106,58 @@
     user-select: text;
     background-color: transparent;
   }
-  .amk-input_disabled input {
+  .ne-input_disabled input {
     color: $color-gray-03;
     cursor: not-allowed;
   }
-  .amk-input input::-webkit-input-placeholder {
+  .ne-input input::-webkit-input-placeholder {
     font-size: 13px;
-    text-transform: lowercase;
     opacity: 1;
     text-indent: 0;
     transform: translateZ(0);
     color: $color-gray-05;
     transition: text-indent $animation-time-02 $animation-easing, $animation-time-01 $animation-easing;
   }
-  .amk-input input::-moz-placeholder {
+  .ne-input input::-moz-placeholder {
     font-size: 13px;
-    text-transform: lowercase;
     opacity: 1;
     text-indent: 0;
     transform: translateZ(0);
     color: $color-gray-05;
     transition: text-indent $animation-time-02 $animation-easing, opacity $animation-time-01 $animation-easing;
   }
-  .amk-input input:-moz-placeholder {
+  .ne-input input:-moz-placeholder {
     font-size: 13px;
-    text-transform: lowercase;
     opacity: 1;
     text-indent: 0;
     transform: translateZ(0);
     color: $color-gray-05;
     transition: text-indent $animation-time-02 $animation-easing, opacity $animation-time-01 $animation-easing;
   }
-  .amk-input input:-ms-input-placeholder {
+  .ne-input input:-ms-input-placeholder {
     font-size: 13px;
-    text-transform: lowercase;
     opacity: 1;
     text-indent: 0;
     transform: translateZ(0);
     color: $color-gray-05;
     transition: text-indent $animation-time-02 $animation-easing, opacity $animation-time-01 $animation-easing;
   }
-  .amk-input input:focus::-webkit-input-placeholder {
+  .ne-input input:focus::-webkit-input-placeholder {
     opacity: 0;
     text-indent: -500px;
     transition: text-indent $animation-time-02 $animation-easing, opacity $animation-time-01 $animation-easing;
   }
-  .amk-input input:focus::-moz-placeholder {
+  .ne-input input:focus::-moz-placeholder {
     opacity: 0;
     text-indent: -500px;
     transition: text-indent $animation-time-02 $animation-easing, opacity $animation-time-01 $animation-easing;
   }
-  .amk-input input:focus:-moz-placeholder {
+  .ne-input input:focus:-moz-placeholder {
     opacity: 0;
     text-indent: -500px;
     transition: text-indent $animation-time-02 $animation-easing, opacity $animation-time-01 $animation-easing;
   }
-  .amk-input input:focus:-ms-input-placeholder {
+  .ne-input input:focus:-ms-input-placeholder {
     opacity: 0;
     text-indent: -500px;
     transition: text-indent $animation-time-02 $animation-easing, opacity $animation-time-01 $animation-easing;

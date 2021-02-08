@@ -1,6 +1,6 @@
 import cloneDeep from 'lodash/cloneDeep';
 import MODULE from './types';
-import { VIEWPORT } from '~/store/types';
+import { VIEWPORT } from '@/store/types';
 
 const lockerId = 'modal';
 const lockPageActionName = `viewport/${VIEWPORT.LOCK}`;

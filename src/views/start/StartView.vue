@@ -1,24 +1,24 @@
 <template>
-  <div class="auth-view">
+  <div class="start-view">
     <div class="container">
-      <AuthPage />
+      <StartPage />
     </div>
   </div>
 </template>
 
 <script>
-  import AuthPage from '~/components/auth/AuthPage';
+  import StartPage from '@/components/start/StartPage';
 
   export default {
-    name: 'AuthView',
+    name: 'StartView',
     components: {
-      AuthPage,
+      StartPage,
     },
   };
 </script>
 
 <style lang="scss" scoped>
-  .auth-view {
+  .start-view {
     display: flex;
     align-items: center;
     width: 100%;

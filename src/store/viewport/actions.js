@@ -9,7 +9,7 @@ import {
   getWindowIsFocused,
   getViewportHeight,
   getViewportWidth,
-} from '~/helpers/viewport';
+} from '@/helpers/viewport';
 
 export default {
   [MODULE.INIT]({ dispatch }) {

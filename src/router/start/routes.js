@@ -3,8 +3,8 @@ import paths from './paths';
 
 export default [
   {
-    path: paths.user,
-    name: names.user,
-    component: () => import(/* webpackChunkName: "user" */ '~/views/user/UserView.vue'),
+    path: paths.index,
+    name: names.index,
+    component: () => import(/* webpackChunkName: "user" */ '@/views/start/StartView.vue'),
   },
 ];

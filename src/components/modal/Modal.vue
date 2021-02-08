@@ -5,12 +5,10 @@
   >
     <div
       v-if="isVisible"
-      class="modal"
+      class="modal modal_blur"
       :class="[
         isDefaultPosition && 'modal_padded',
         isBottom && 'modal_bottom',
-        blurIsSupport && 'modal_blur',
-        !blurIsSupport && 'modal_opacity',
       ]"
       @click="overlayClickHandler"
     >
@@ -52,8 +50,8 @@
   import cloneDeep from 'lodash/cloneDeep';
   import isNull from 'lodash/isNull';
   import { mapGetters, mapActions } from 'vuex';
-  import { MODAL, LOGGER } from '~/store/types';
-  import { sleep } from '~/helpers/system';
+  import { MODAL } from '@/store/types';
+  import { sleep } from '@/helpers/system';
 
   export default {
     name: 'Modal',
@@ -69,9 +67,6 @@
         modalPosition: MODAL.GET_POSITION,
         modalComponent: MODAL.GET_COMPONENT,
         closable: MODAL.GET_CLOSABLE,
-      }),
-      ...mapGetters('logger', {
-        blurIsSupport: LOGGER.GET_BLUR_IS_SUPPORT,
       }),
       isVisible() {
         const { component } = this;

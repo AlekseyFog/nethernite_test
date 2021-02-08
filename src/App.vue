@@ -1,28 +1,50 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div
+    id="app"
+    class="app"
+  >
+    <Preloader />
+    <Layout>
+      <transition
+        appear
+        name="fade-in"
+        mode="out-in"
+      >
+        <router-view />
+      </transition>
+    </Layout>
+    <Modal />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapActions } from 'vuex';
+import { VIEWPORT } from '@/store/types';
+import Preloader from '@/components/preloader/Preloader';
+import Layout from '@/components/layout/Layout';
+import Modal from '@/components/modal/Modal';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Preloader,
+    Modal,
+    Layout,
+  },
+  created() {
+    this.initViewport();
+  },
+  methods: {
+    ...mapActions('viewport', {
+      initViewport: VIEWPORT.INIT,
+    }),
+  },
+};
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" src="@/assets/styles/base-style.scss"/>
+<style lang="scss" scoped>
+.app {
+  min-height: 100vh;
 }
 </style>

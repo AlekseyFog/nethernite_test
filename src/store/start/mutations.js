@@ -1,13 +1,16 @@
 import MODULE from './types';
 
 export default {
-  [MODULE.MUTATE_DEVICE_DATA]: (state, deviceData) => {
-    state.deviceData = deviceData;
+  [MODULE.MUTATE_PACKAGE_NAME]: (state, packageName) => {
+    state.packageName = packageName;
   },
-  [MODULE.MUTATE_USER_DATA]: (state, userData) => {
-    state.userData = userData;
+  [MODULE.MUTATE_PACKAGES_BY_NAME]: (state, packageByName) => {
+    state.packageByName = packageByName;
   },
-  [MODULE.MUTATE_SELECTED_USER]: (state, selectedUser) => {
-    state.selectedUser = selectedUser;
+  [MODULE.MUTATE_PACKAGES_PAGE]: (state, packagesPage) => {
+    state.packagesPage = packagesPage;
+  },
+  [MODULE.MUTATE_DETAILS_DATA]: (state, detailsData) => {
+    state.detailsData = detailsData;
   },
 };

@@ -8,22 +8,25 @@
     <LayoutContent class="layout__content">
       <slot />
     </LayoutContent>
+    <LayoutFooter class="layout__footer"/>
   </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex';
-  import { VIEWPORT } from '~/store/types';
-  import { setScrollTop } from '~/helpers/viewport';
+  import { VIEWPORT } from '@/store/types';
+  import { setScrollTop } from '@/helpers/viewport';
 
   import LayoutNavigation from './LayoutNavigation';
   import LayoutContent from './LayoutContent';
+  import LayoutFooter from './LayoutFooter';
 
   export default {
     name: 'Layout',
     components: {
       LayoutNavigation,
       LayoutContent,
+      LayoutFooter,
     },
     data() {
       return {
@@ -72,10 +75,16 @@
     z-index: 0;
   }
   .layout__navigation {
-    width: 80px;
+    width: 100%;
   }
   .layout__content {
-    width: calc(100% - 80px);
+    width: 100%;
+    height: calc(100% - 100px);
+  }
+  .layout-footer{
+    margin-top: auto;
+    width: 100%;
+    height: 50px;
   }
   .layout_locked {
     position: fixed;
@@ -84,4 +93,5 @@
     overflow: hidden;
     pointer-events: none;
   }
+
 </style>

@@ -5,11 +5,7 @@
   >
     <div
       v-if="isVisible"
-      class="preloader"
-      :class="[
-        blurIsSupport && 'preloader_blur',
-        !blurIsSupport && 'preloader_opacity',
-      ]"
+      class="preloader preloader_blur"
     >
       <PreloaderIcon />
     </div>
@@ -18,8 +14,8 @@
 
 <script>
   import { mapGetters } from 'vuex';
-  import { LOGGER, PRELOADER } from '~/store/types';
-  import PreloaderIcon from '~/assets/svg/preloader-icon.svg';
+  import { PRELOADER } from '@/store/types';
+  import PreloaderIcon from '@/assets/svg/preloader-icon.svg';
 
   export default {
     name: 'Preloader',
@@ -27,9 +23,6 @@
       PreloaderIcon,
     },
     computed: {
-      ...mapGetters('logger', {
-        blurIsSupport: LOGGER.GET_BLUR_IS_SUPPORT,
-      }),
       ...mapGetters('preloader', {
         isVisible: PRELOADER.PRELOADER_IS_VISIBLE,
       }),
