@@ -1,0 +1,32 @@
+$color-black-01: #000000;
+$color-gray-01: #ffffff;
+$color-gray-02: #323b47;
+$color-gray-03: #282828;
+$color-gray-04: #101010;
+$color-gray-05: #465162;
+$color-gray-06: #323945;
+$color-violet-01: #6c68ab;
+$color-violet-02: #3a3e57;
+$color-violet-03: #79BFE9;
+$color-red-01: #ffe0e0;
+$color-red-02: #ff4c4c;
+$color-green-01: #73ff4c;
+$color-orange-01: #ffae4c;
+
+$color-overlay: rgba(0, 0, 0, 0.4);
+$sensor-shadow-color: rgba(0, 0, 0, 0.1);
+
+$animation-time-01: 0.15s;
+$animation-time-02: 0.2s;
+$animation-time-03: 0.3s;
+$animation-time-04: 2s;
+$animation-time-05: 5s;
+$animation-easing: cubic-bezier(0.5, 0, 0.5 ,1);
+
+$modal-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+$screen-xs: map-get($grid-breakpoints, 'xs');
+$screen-sm: map-get($grid-breakpoints, 'sm');
+$screen-md: map-get($grid-breakpoints, 'md');
+$screen-lg: map-get($grid-breakpoints, 'lg');
+$screen-xl: map-get($grid-breakpoints, 'xl');
