@@ -1,7 +1,7 @@
 # NETHERNITE TEST
 
 ### Npm dev commands
-> - `dev` - run development.
+> - `start` - run development.
 > - `lint` - check your code for codeStyle.
 ---
 > - `npm run lint -- --fix` fix linter problem.
